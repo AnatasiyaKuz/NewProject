@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    background-image: url(../images/bgc.png);
+    background-position: center center;      
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    background-size: cover;   
+    background-color: #998431;
+
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.Montserrat{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;
+    
+    
+}
+.Montserrat.white{
+    color: #FFFFFF;
+    text-align: center;
+}
+.Montserrat.black{
+    color: #000;
+    text-align: left ;
+}
+.Montserrat .sixt{
+    font-size: 16px;
+}
+.Montserrat .fourteen{
+    font-size: 14px;
+}
+.Montserrat .thirteen{
+    font-size: 13px;
+}
+.adress-phone{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    color: #FFFFFF;
+
+}
+
+.main-menu{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+.main-menu .borders{
+    width: 25%;
+    border: 1px solid #FFFFFF;
+    padding: 10px 0;
+
+    transition: all 350ms ease;
+    cursor: pointer;
+}
+.borders:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    
+}
+.borders:last-child{
+    border-right: none;
+}
+.borders:first-child{
+    border-left: none;
+}
+
+.mainButtons{
+    margin-top: 500px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.button{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    background: #998431;
+    padding: 10px 30px;
+    
+}
+.button.center{
+    text-align: center;
+}
+.button.left{
+    text-align: left;
+    margin-top: 30px;
+
+}
+.button:last-child{
+    margin-left: 15px;
+}
+.button:first-child{
+    margin-right: 15px;
+}
+
+.opisanie{
+    width: 100%;
+    background-color:#282828;
+    padding:100px 0;
+    
+}
+.containInfo{
+    border: 1px solid #FFFFFF;
+    padding: 60px 0;
+}
+.PlayfairDisplay{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    
+    line-height: 150%;
+    
+}
+.PlayfairDisplay.white{
+    color: #FFFFFF;
+    text-align: center;
+}
+.PlayfairDisplay.black{
+    color: #282828;
+    text-align: left;
+}
+.PlayfairDisplay.thirty-six{
+    font-size: 36px;
+}
+.PlayfairDisplay.eighteen{
+    font-size: 18px;
+}
+
+.line{
+    
+    max-width: 160px;
+    height: 1px;
+    
+}
+.line.white{
+    margin-top: 40px;
+    border-top: 1px solid #FFFFFF;
+    margin: 0 auto;
+    
+}
+.line.black{
+    border-top: 1px solid #282828;
+    margin: 30px 0;
+
+}
+.indent{
+    padding: 40px 190px;
+}
+.imgGlass{
+    text-align: center;
+}
+
+
+.newCollection{
+    width: 100%;
+    background-color: #E6E3C4;
+    height: auto;
+    padding: 80px 0;
+}
+.newCollectionInfo{
+    width: 100%;
+    padding: 60px 0;
+    border: 1px solid #998431;
+    border-left:none;
+    border-right: none;
+    
+    
+}
+.pad{
+    padding-bottom:30px;
+}
+.aboutNewCollection{
+    width: 50%;
+   
+    
+}
+
+table{
+    border-collapse: collapse;
+    /* border: 1px solid #282828; */
+    margin: 30px 0;
+}
+th{
+    padding: 0 24px;
+    border: 1px solid #282828;
+    text-align: center; 
+}
+
+
+@media (max-width:1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+@media (max-width:992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+@media (max-width:767px) {
+    .container{
+        max-width: none;
+    }
+}

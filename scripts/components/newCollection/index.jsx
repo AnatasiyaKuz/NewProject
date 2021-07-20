@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../../../css/styles.css'
+import { Gallery } from '../gallery';
 
 export const NewCollection=()=>{
     return(
@@ -21,7 +22,9 @@ export const NewCollection=()=>{
                         <p className="Montserrat black fourteen">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing morbi sodales ac.</p>
                         <button className="button left">узнать подробнее</button>
                     </div>
-                    <div className="photoNewCollection"></div>
+                    <div className="photoNewCollection">
+                        <Gallery/>
+                    </div>
                 </div>
             </div>
         </section>

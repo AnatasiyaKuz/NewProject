@@ -36,11 +36,12 @@ export const Contacts =()=>{
 
 
     return(
-        <section className="contacts">
+        <footer className="contacts">
             <div className="container">
                 <div className="contactsNav">
-                    <div className="navFotter">
+                    <div className="navFootter">
                         <ul>
+                            
                              {
                                  date.map((item,index)=>{
                                      return(
@@ -50,12 +51,28 @@ export const Contacts =()=>{
                             }
                         </ul>
                     </div>
+                    <div className="contactInfo">
+                        <div className="elem_contactInfo">
+                            <p className="Montserrat fourteen white" style={{textTransform:'uppercase'}}>винный бутик le corte</p>
+                        </div>
+                        <div className="elem_contactInfo">
+                        <p className="Montserrat fourteen white" style={{textTransform:'uppercase'}}>8 (812) 123-45-67</p>
+                        </div>
+                        <div className="elem_contactInfo">
+                            <img src="../../../images/youtube.png" />
+                            <img src="../../../images/vk.png" />
+                            <img src="../../../images/fb.png" />
+                        </div>
+                        <div className="elem_contactInfo">
+                        <p className="Montserrat fourteen white" style={{textTransform:'uppercase'}}>@le-corte.ru</p>
+                        </div>
+                    </div>
                         
                     
                     
                 </div>
             </div>
-        </section>
+        </footer>
     )
 
 }

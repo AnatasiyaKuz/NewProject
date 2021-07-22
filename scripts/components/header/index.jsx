@@ -32,7 +32,7 @@ export const Header=()=>{
                     {
                         mainMenu.map((item,index)=>{
                             return(
-                                <div className="Montserrat white fourteen borders" key={index}>{item.name} </div>
+                                <div style={{textAlign:'center'}} className="Montserrat white fourteen borders" key={index}>{item.name} </div>
                             )
                         })
                     }

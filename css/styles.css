@@ -2,15 +2,64 @@
     margin: 0;
     padding: 0;
 }
+/*FONTS*/
+.Montserrat{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;   
+}
+.Montserrat.white{
+    color: #FFFFFF;
+}
+.Montserrat.black{
+    color: #000;
+}
+.Montserrat .sixt{
+    font-size: 16px;
+}
+.Montserrat .fourteen{
+    font-size: 14px;
+}
+.Montserrat .thirteen{
+    font-size: 13px;
+}
 
+.PlayfairDisplay{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    
+    line-height: 150%;
+    
+}
+.PlayfairDisplay.white{
+    color: #FFFFFF;
+    text-align: center;
+}
+.PlayfairDisplay.black{
+    color: #282828;
+    text-align: left;
+}
+.PlayfairDisplay.thirty-six{
+    font-size: 36px;
+}
+.PlayfairDisplay.eighteen{
+    font-size: 18px;
+}
+/*.....*/
+    
+
+/*HEADER*/
 .header{
     width: 100%;
-    background-image: url(../images/bgc.png);
+    background-image: url(/images/bgc.png);
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;      
     background-size: cover;   
     background-color: #998431;
+    
 
 }
 .container{
@@ -24,40 +73,7 @@
     justify-content: space-between;
     padding-top: 30px;
 }
-.Montserrat{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 150%;
-    
-    
-}
-.Montserrat.white{
-    color: #FFFFFF;
-    text-align: center;
-}
-.Montserrat.black{
-    color: #000;
-    text-align: left ;
-}
-.Montserrat .sixt{
-    font-size: 16px;
-}
-.Montserrat .fourteen{
-    font-size: 14px;
-}
-.Montserrat .thirteen{
-    font-size: 13px;
-}
-.adress-phone{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 150%;
-    color: #FFFFFF;
 
-}
 
 .main-menu{
     display: flex;
@@ -84,11 +100,12 @@
 }
 
 .mainButtons{
-    margin-top: 500px;
+    margin-top: 400px;
     padding-bottom: 100px;
     text-align: center;
 }
 .button{
+    
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -118,6 +135,8 @@
 .button:first-child{
     margin-right: 15px;
 }
+/*..........*/
+
 
 .opisanie{
     width: 100%;
@@ -129,28 +148,7 @@
     border: 1px solid #FFFFFF;
     padding: 60px 0;
 }
-.PlayfairDisplay{
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
-    
-    line-height: 150%;
-    
-}
-.PlayfairDisplay.white{
-    color: #FFFFFF;
-    text-align: center;
-}
-.PlayfairDisplay.black{
-    color: #282828;
-    text-align: left;
-}
-.PlayfairDisplay.thirty-six{
-    font-size: 36px;
-}
-.PlayfairDisplay.eighteen{
-    font-size: 18px;
-}
+
 
 .line{
     
@@ -171,6 +169,7 @@
 }
 .indent{
     padding: 40px 190px;
+    
 }
 .imgGlass{
     text-align: center;
@@ -190,7 +189,7 @@
     border-left:none;
     border-right: none;
     display: flex;
-    flex-direction: row;
+    flex-wrap:nowrap;
     
     
 }
@@ -199,6 +198,7 @@
 }
 .aboutNewCollection{
     width: 50%;
+   
    
     
 }
@@ -224,6 +224,7 @@ th{
    display: flex;
    flex-wrap: wrap;
    text-align: center;
+   padding-left: 15px;
 }
 .gallery .pic:first-child{
     max-width: 100%;
@@ -290,25 +291,212 @@ th{
     color: #ffffff;
     cursor: pointer;
 }
+/*.......*/
 
 
+
+/*TASTING*/
+.tasting{
+    background-color: #282828;
+}
+fieldset{
+    color: #FFFFFF;
+
+}
+.inputContainer{
+    width: 50%;
+    margin: 0 auto;
+}
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+input{
+    background-color: #282828;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    width: 45%;
+    
+}
 
 
 
 /*.......*/
 
+/*Contacts*/
+.contacts{
+    background-color: #998431;
+}
+.contactsNav{
+    
+    border: none;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+li{
+    list-style-type: none;
+   
+    padding: 15px 30px;
+}
+.navFotter{
+    text-align: center3;
+}
+/* li:last-child{
+    padding-right: 80px;
+}
+li:first-child{
+    padding-left: 80px;
+} */
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+/*........*/
+
+
+
+
+
 @media (max-width:1200px) {
+    .PlayfairDisplay.thirty-six{     
+        font-size: 36px
+    }
+    
     .container{
         max-width: 970px;
     }
+    .indent{
+        padding: 40px 100px;
+        
+    }
+    .newCollectionInfo{
+        
+        flex-wrap: wrap;
+    }
+    
+
 }
 @media (max-width:992px) {
+    .PlayfairDisplay.thirty-six{
+        
+        font-size: calc(32px + 4px*(100vw/992));
+        text-align: center;
+    }
+    
+
+    
     .container{
         max-width: 750px;
     }
+
+    .newCollectionInfo{
+        flex-wrap: wrap;
+    }
+    .aboutNewCollection{
+        width: 100%;
+        text-align: center;
+    }
+    .line.black{
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    table{
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .button.left{
+        margin:0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .photoNewCollection{
+        width: 100%;
+
+    }
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .gallery.pic img:nth-child(2),
+    .pic img:nth-child(3){
+        width: 100%;
+    }
+    
 }
 @media (max-width:767px) {
-    .container{
-        max-width: none;
+    .PlayfairDisplay.thirty-six{
+        font-size: calc(30px + 6px*(100vw/767));
     }
+
+    .PlayfairDisplay.eighteen {
+        font-size: 15px;
+    }
+    .header{
+        height: 100vh;
+    }
+    .container{
+        max-width:none;
+    }
+    .main-menu{
+        display:none;
+    }
+    .mainButtons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button{
+        width: 60%;
+        margin: 5px 0 ;
+    }
+    .button:first-child{
+        margin-right: 0;
+    }
+    .button:last-child{
+        margin-left: 0;
+
+    }
+
+    .indent{
+        padding: 40px 5px;
+        
+    }
+    /**/
+
+    .newCollectionInfo{
+        flex-wrap: wrap;
+    }
+    .aboutNewCollection{
+        width: 100%;
+        text-align: center;
+    }
+    .line.black{
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    table{
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .button.left{
+        margin:0 auto;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .photoNewCollection{
+        width: 100%;
+    }
+
 }

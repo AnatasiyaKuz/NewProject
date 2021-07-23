@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { useState } from 'react';
+import CloseIcon from '@material-ui/icons/Close';
 import '../../../css/styles.css'
 
 export const Header=()=>{
@@ -10,7 +11,8 @@ export const Header=()=>{
         },
         {
             id:2,
-            name:'Доставка'
+            name:'Доставка',
+            
         },
         {
             id:3,
@@ -21,8 +23,38 @@ export const Header=()=>{
             name:'Контакты'
         }
     ]
+ 
+    const [form,setForm]=useState(false);
+    const [temping, setTemping]=useState('')
+    const getForm = (name)=>{
+        if(name==='Доставка'){
+            setForm(true);
+            setTemping(name)
+        }
+        
+    }
+
     return(
         <header className="header">
+
+                <div className={form ? "formDostavka openForm" : "formDostavka"}>
+                   
+                    <fieldset>
+                    <CloseIcon onClick={()=>setForm(false)} />
+                        <legend>{temping}</legend>
+                        <form>
+                            <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="text" id="name" name="Name" placeholder="Имя"/>
+                            <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="tel" id="phone" name="Phone" placeholder="Телефон"/>
+                            <input className="Montserrat thirteen white" type="text" id="adress" name="Adress" placeholder="Адрес доставки"></input>
+                        </form>
+                        <button  className="Montserrat white" >Заказать</button>
+                        
+                    </fieldset>
+                    
+
+                </div>
+           
+            
             <div className="container">
                 <div className="information">
                     <div className="Montserrat white thirteen">Новокузнечный переулок 4/1</div>
@@ -32,7 +64,7 @@ export const Header=()=>{
                     {
                         mainMenu.map((item,index)=>{
                             return(
-                                <div style={{textAlign:'center'}} className="Montserrat white fourteen borders" key={index}>{item.name} </div>
+                                <div style={{textAlign:'center'}} onClick={()=>getForm(item.name)} className="Montserrat white fourteen borders" key={index}>{item.name} </div>
                             )
                         })
                     }

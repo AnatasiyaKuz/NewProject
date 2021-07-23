@@ -58,7 +58,7 @@
     background-repeat: no-repeat;      
     background-attachment: fixed;      
     background-size: cover;   
-    background-color: #998431;
+    background-color: #E6E3C4;
     
 
 }
@@ -90,6 +90,7 @@
 }
 .borders:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
     
 }
 .borders:last-child{
@@ -119,6 +120,7 @@
 
     background: #998431;
     padding: 10px 30px;
+    cursor: pointer;
     
 }
 .button.center{
@@ -135,6 +137,73 @@
 .button:first-child{
     margin-right: 15px;
 }
+.formDostavka{
+    width: 25%;
+    height: 50vh;
+    position: fixed;
+    display: flex;
+    
+    justify-content: center;
+    background-color: #282828;
+    transition:  opacity .4 ease, visibility .4s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 999;
+    margin: 100px auto;
+    
+}
+
+.formDostavka.openForm{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    
+}
+
+.formDostavka.openForm svg{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    background-color: (0,0,0,0.4);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.formDostavka.openForm form{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 0 10px;
+    
+}
+.formDostavka.openForm button{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 0;
+    margin-top: 50px;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    background-color: #282828;
+}
+.header fieldset{
+    text-align: center;
+    margin:0 10px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.header legend{
+    font-size: 24px;
+}
+
 /*..........*/
 
 
@@ -241,7 +310,9 @@ th{
 }
 
 .gallery .pic:hover{
-    filter: opacity(.8);
+    /* filter: opacity(.8); */
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .model{
@@ -298,10 +369,11 @@ th{
 /*TASTING*/
 .tasting{
     background-color: #282828;
+    padding: 100px 0;
 }
 fieldset{
     color: #FFFFFF;
-
+    
 }
 .inputContainer{
     width: 50%;
@@ -310,15 +382,40 @@ fieldset{
 form{
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 70px;
+}
+.line.white{
+    margin-top: 40px;
+    
+}
+.inputContainer .line{
+    margin-bottom: 40px;
 }
 input{
     background-color: #282828;
     border: none;
     border-bottom: 1px solid #FFFFFF;
     width: 45%;
-    
+    padding: 10px 0;
+}
+input:last-child{
+    width: 100%;
+    margin-top: 30px;
+}
+.inputContainer .button{
+    width: 100%;
+    background-color: #282828;
+    margin: 0 auto;
+    border: 1px solid #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.inputContainer .button:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.01);
+    cursor: pointer;
 }
 
 
@@ -341,12 +438,10 @@ li{
    
     padding: 15px 30px;
 }
-/* .navFotter{
-    
-    border: none;
-    border-top: 1px solid #FFFFFF;
-    border-bottom: 1px solid #FFFFFF;
-} */
+li:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
 
 ul{
     display: flex;
@@ -372,9 +467,11 @@ ul{
     padding: 15px 60px;
     border:1px solid #ffffff;
     border-top:none;
-    border-bottom: none;
-   
-  
+    border-bottom: none; 
+}
+.elem_contactInfo:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 .elem_contactInfo img:first-child{
     padding-right: 16px;
@@ -458,9 +555,8 @@ ul{
         flex-wrap: wrap;
     }
     
-    .gallery.pic img:nth-child(2),
-    .pic img:nth-child(3){
-        width: 100%;
+    .pic:first-child{
+        margin: 0 auto;
     }
     
 }
@@ -530,5 +626,15 @@ ul{
     .photoNewCollection{
         width: 100%;
     }
+    .gallery{
+        padding: 0;
+    }
+    .pic:first-child{
+        margin: 0 auto;
+    }
 
+
+    .inputContainer{
+        width: 80%;
+    }
 }

@@ -56,11 +56,9 @@
     background-image: url(/images/bgc.png);
     background-position: center center;      
     background-repeat: no-repeat;      
-    background-attachment: fixed;      
+    background-attachment: fixed;  
+    background-color: #E6E3C4;    
     background-size: cover;   
-    background-color: #E6E3C4;
-    
-
 }
 .container{
     max-width: 1110px;
@@ -137,11 +135,16 @@
 .button:first-child{
     margin-right: 15px;
 }
-.formDostavka{
+.formDostavka {
     width: 25%;
     height: 50vh;
     position: fixed;
     display: flex;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     
     justify-content: center;
     background-color: #282828;
@@ -151,22 +154,20 @@
     transform: scale(0);
     overflow: hidden;
     z-index: 999;
-    margin: 100px auto;
     
 }
 
-.formDostavka.openForm{
+.formDostavka.openForm {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
     display: flex;
     flex-direction: column;
     border-radius: 5%;
-    
 }
 
 .formDostavka.openForm svg{
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
     width: 2rem;
@@ -203,7 +204,9 @@
 .header legend{
     font-size: 24px;
 }
-
+.menuIcon{
+    display: none;
+}
 /*..........*/
 
 
@@ -492,12 +495,13 @@ ul{
 
 
 @media (max-width:1200px) {
+    
     .PlayfairDisplay.thirty-six{     
         font-size: 36px
     }
     
     .container{
-        max-width: 970px;
+        max-width: 90%;
     }
     .indent{
         padding: 40px 100px;
@@ -508,7 +512,9 @@ ul{
         flex-wrap: wrap;
         
     }
-    
+    .menuIcon{
+        display: none;
+    }
 
 }
 @media (max-width:992px) {
@@ -521,7 +527,7 @@ ul{
 
     
     .container{
-        max-width: 750px;
+        max-width: 90%;
     }
 
     .newCollectionInfo{
@@ -558,7 +564,12 @@ ul{
     .pic:first-child{
         margin: 0 auto;
     }
-    
+    .elem_contactInfo{
+        border: none;
+    }
+    .menuIcon{
+        display: none;
+    }
 }
 @media (max-width:767px) {
     .PlayfairDisplay.thirty-six{
@@ -572,7 +583,7 @@ ul{
         height: 100vh;
     }
     .container{
-        max-width:none;
+        max-width:97%;
     }
     .main-menu{
         display:none;
@@ -636,5 +647,24 @@ ul{
 
     .inputContainer{
         width: 80%;
+    }
+
+    .elem_contactInfo{
+        border: none;
+    }
+    .menuIcon{
+        display: block;
+        text-align: right;
+    }
+    .menuIcon svg{
+
+        top: 10px;
+        right: 10px;
+        width: 3rem;
+        height: 3rem;
+        padding: 5px;
+        background-color: (0,0,0,0.4);
+        color: #ffffff;
+        cursor: pointer;
     }
 }

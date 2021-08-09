@@ -3,7 +3,7 @@ import '../../../css/styles.css'
 
 export const Tasting = () => {
     return(
-        <div className="tasting">
+        <div className="tasting" id="degustaciya">
             <div className="container">
                 <fieldset>
                     <legend className="PlayfairDisplay thirty-six white">Запись на дегустацию</legend>

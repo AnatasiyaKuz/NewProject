@@ -4,7 +4,7 @@ import imgGlass from '../../../images/glass.png'
 
 export const Opisanie =()=>{
     return(
-        <section className="opisanie">
+        <section className="opisanie" id="3">
             <div className="container">
                 <div className="containInfo">
                     <h2 className="PlayfairDisplay white thirty-six">Лучший вкус, это вкус долголетнего вина</h2>

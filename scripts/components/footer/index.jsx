@@ -36,7 +36,7 @@ export const Contacts =()=>{
 
 
     return(
-        <footer className="contacts">
+        <footer className="contacts" id="4">
             <div className="container">
                 <div className="contactsNav">
                     <div className="navFootter">
@@ -45,7 +45,10 @@ export const Contacts =()=>{
                              {
                                  date.map((item,index)=>{
                                      return(
-                                            <li className="Montserrat fourteen white" key={index}>{item.name}</li>
+                                            <a href={item.id}>
+                                                <li className="Montserrat fourteen white" key={index}>{item.name}</li>
+                                            </a>
+                                            
                                         )
                                      })
                             }

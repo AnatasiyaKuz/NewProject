@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 import '../../../css/styles.css'
+import { RestaurantTwoTone } from '@material-ui/icons';
 
 
 export const Header=()=>{
@@ -37,7 +38,13 @@ export const Header=()=>{
         }
     }
     const getMenu = ()=>{
-        setMenu(true);
+        if(menu===false){
+            setMenu(true);
+        }
+        else{
+            setMenu(false);
+        }
+        
     }
 
     return(
@@ -47,7 +54,7 @@ export const Header=()=>{
                    
                    <fieldset>
                    <CloseIcon onClick={()=>setForm(false)} />
-                       <legend>{temping}</legend>
+                       <legend>Доставка</legend>
                        <form>
                            <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="text" id="name" name="Name" placeholder="Имя"/>
                            <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="tel" id="phone" name="Phone" placeholder="Телефон"/>
@@ -66,11 +73,27 @@ export const Header=()=>{
                     <div className="Montserrat white thirteen">8 (812) 123-45-67</div>  
                 </div>
                 <div className="menuIcon" onClick={()=>getMenu()} ><MenuIcon/></div>
+                <div className={menu ? "menuBurger openBurger" : "menuBurger"}>
+                <div className="menuIcon" onClick={()=>getMenu()} ><MenuIcon/></div>
+                    <h2 className="Montserrat white" style={{textAlign:'center'}}>Menu</h2>
+                    <div className="line white" style={{width:'100px', marginTop:'0'}}></div>
+                    <ul style={{display:'flex',flexDirection:'column', paddingTop:'30px'}}>
+                        {
+                            mainMenu.map((item,index)=>{
+                                return(
+                                    <li style={{color:'#ffffff',fontSize:'24px'}}>{item.name}</li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
                 <div className="main-menu">
                     {
                         mainMenu.map((item,index)=>{
                             return(
-                                <div style={{textAlign:'center'}} onClick={()=>getForm(item.name)} className="Montserrat white fourteen borders" key={index}>{item.name} </div>
+                                
+                                    <div style={{textAlign:'center'}} onClick={()=>getForm(item.name)} className="Montserrat white fourteen borders" key={index}><a href={`#${item.id}`}>{item.name}</a> </div>
+                                
                             )
                         })
                     }
@@ -78,7 +101,7 @@ export const Header=()=>{
                 </div>
                 <div className="mainButtons">
                     <button className="button center">ВИННАЯ КАРТА</button>
-                    <button className="button center">ДЕГУСТАЦИЯ</button>
+                    <button className="button center"><a href="#degustaciya">ДЕГУСТАЦИЯ</a></button>
                 </div>
             </div>
         </header>

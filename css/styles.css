@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 /*FONTS*/
 .Montserrat{
     font-family: Montserrat;
@@ -53,7 +58,7 @@
 /*HEADER*/
 .header{
     width: 100%;
-    background-image: url(/images/bgc.png);
+    height: 100vh;
     background-position: center center;      
     background-repeat: no-repeat;      
     background-attachment: fixed;  
@@ -99,8 +104,8 @@
 }
 
 .mainButtons{
-    margin-top: 400px;
-    padding-bottom: 100px;
+    padding-top:60vh;
+    
     text-align: center;
 }
 .button{
@@ -206,6 +211,26 @@
 }
 .menuIcon{
     display: none;
+}
+.menuBurger{
+    visibility: hidden;
+    overflow: hidden;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #282828;
+    position: fixed;
+    margin:0;
+    -webkit-transition: right 0.7s;
+    -moz-transition: right 0.7s;
+    transition: right 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+.menuBurger.openBurger{
+    visibility: visible; 
 }
 /*..........*/
 
@@ -523,7 +548,9 @@ ul{
         font-size: calc(32px + 4px*(100vw/992));
         text-align: center;
     }
-    
+    .menuBurger{
+        width: 50%;
+    }
 
     
     .container{
@@ -584,6 +611,9 @@ ul{
     }
     .container{
         max-width:97%;
+    }
+    .menuBurger{
+        width: 60%;
     }
     .main-menu{
         display:none;

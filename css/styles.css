@@ -140,9 +140,12 @@ a{
 .button:first-child{
     margin-right: 15px;
 }
+.dost{
+    width: 30%;
+    margin: 0 auto;
+}
 .formDostavka {
-    width: 25%;
-    height: 50vh;
+    
     position: fixed;
     display: flex;
     margin: auto;
@@ -199,6 +202,10 @@ a{
     text-transform: uppercase;
     border: 1px solid #FFFFFF;
     background-color: #282828;
+}
+.formDostavka .openForm header{
+    opacity: 0.2;
+    
 }
 .header fieldset{
     text-align: center;
@@ -549,7 +556,7 @@ ul{
         text-align: center;
     }
     .menuBurger{
-        width: 50%;
+        width: 40%;
     }
 
     
@@ -568,6 +575,9 @@ ul{
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .dost{
+        width: 50%;
     }
     table{
         margin: 0 auto;
@@ -614,6 +624,9 @@ ul{
     }
     .menuBurger{
         width: 60%;
+    }
+    .dost{
+        width: 70%;
     }
     .main-menu{
         display:none;

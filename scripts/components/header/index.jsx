@@ -50,19 +50,22 @@ export const Header=()=>{
     return(
         <header className="header" style={{backgroundImage:'url(../images/bgc.png)'}}>
            
-           <div className={form ? "formDostavka openForm" : "formDostavka"}>
-                   
-                   <fieldset>
-                   <CloseIcon onClick={()=>setForm(false)} />
-                       <legend>Доставка</legend>
-                       <form>
-                           <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="text" id="name" name="Name" placeholder="Имя"/>
-                           <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="tel" id="phone" name="Phone" placeholder="Телефон"/>
-                           <input className="Montserrat thirteen white" type="text" id="adress" name="Adress" placeholder="Адрес доставки"></input>
-                       </form>
-                       <button  className="Montserrat white" >Заказать</button>
+           <div id="2" className={form ? "formDostavka openForm" : "formDostavka"} style={{width:'100%', height:'100vh', opacity:'0.85',position:'fixed'}}>
+                   <div className="dost" style={{width:'30%',margin:'0 auto'}}>
+                        <fieldset>
+                            <CloseIcon onClick={()=>setForm(false)} />
+                            <legend>Доставка</legend>
+                            <form>
+                                <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="text" id="name" name="Name" placeholder="Имя"/>
+                                <input className="Montserrat thirteen white" style={{textAlign:'left'}} type="tel" id="phone" name="Phone" placeholder="Телефон"/>
+                                <input className="Montserrat thirteen white" type="text" id="adress" name="Adress" placeholder="Адрес доставки"></input>
+                            </form>
+                            <button  className="Montserrat white" >Заказать</button>
                        
-                   </fieldset>
+                        </fieldset>
+
+                   </div>
+                   
                    
 
                </div>   
@@ -81,7 +84,7 @@ export const Header=()=>{
                         {
                             mainMenu.map((item,index)=>{
                                 return(
-                                    <li style={{color:'#ffffff',fontSize:'24px'}}>{item.name}</li>
+                                    <li style={{color:'#ffffff',fontSize:'24px'}}><a href={`#${item.id}`} onClick={()=>getMenu()}>{item.name}</a></li>
                                 )
                             })
                         }
